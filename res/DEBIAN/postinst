@@ -1,0 +1,23 @@
+#!/bin/bash
+
+set -e
+
+if [ "$1" = configure ]; then
+
+	INITSYS=$(ls -al /proc/1/exe | awk -F' ' '{print $NF}' | awk -F'/' '{print $NF}')
+    ln -s /usr/lib/reachdesk/reachdesk /usr/bin/reachdesk
+	
+	if [ "systemd" == "$INITSYS" ]; then
+
+		if [ -e /etc/systemd/system/reachdesk.service ]; then
+			rm /etc/systemd/system/reachdesk.service /usr/lib/systemd/system/reachdesk.service /usr/lib/systemd/user/reachdesk.service >/dev/null  2>&1
+		fi
+		version=$(python3 -V 2>&1 | grep -Po '(?<=Python )(.+)')
+		parsedVersion=$(echo "${version//./}")
+        mkdir -p /usr/lib/systemd/system/
+		cp /usr/share/reachdesk/files/systemd/reachdesk.service /usr/lib/systemd/system/reachdesk.service
+		systemctl daemon-reload
+		systemctl enable reachdesk
+		systemctl start reachdesk
+	fi
+fi

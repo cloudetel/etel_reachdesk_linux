@@ -1,0 +1,12 @@
+7f607aa509bdaad944438f08f593af6c  usr/bin/reachdesk
+8aa9c14e16711b40460583ebcd9cf8bf  usr/lib/reachdesk/res/mac-tray-light-x2.png
+8aa9c14e16711b40460583ebcd9cf8bf  usr/lib/reachdesk/res/mac-tray-dark-x2.png
+506de2df5fb2b7c31e59ad8fd7719846  usr/share/icons/hicolor/33x32/apps/reachdesk.png
+e76cd43c46fd7cad208f306da96ea29b  usr/share/icons/hicolor/128x123@2x/apps/reachdesk.png
+e76cd43c46fd7cad208f306da96ea29b  usr/share/icons/hicolor/128x123/apps/reachdesk.png
+058e4051d0b1dd5a98a8ed89519ec03e  usr/share/applications/reachdesk.desktop
+c7c1cebe9fa6d94511d9c62ff22c3151 usr/share/reachdesk/files/systemd/reachdesk.service
+2fb019e59d2ea6393de14674eb02c349 etc/reachdesk/startwm.sh
+60759d790f1fe98ca28b023a45598cf8 etc/X11/reachdesk/xorg.conf
+e4a03616835e4b7faab0bb96f2e0f98f etc/pam.d/reachdesk
+91a95f199569afe4fbf9e433853f8f97 usr/lib/reachdesk/libsciter-gtk.so
