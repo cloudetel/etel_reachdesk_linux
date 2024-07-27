@@ -7,10 +7,10 @@ git clone https://github.com/microsoft/vcpkg
 cd vcpkg
 git checkout 2023.10.19
 cd ..
-vcpkg/bootstrap-vcpkg.sh -disableMetrics
+vcpkg/bootstrap-vcpkg.sh
 export VCPKG_ROOT=$PWD/vcpkg
 vcpkg/vcpkg install --x-install-root="$VCPKG_ROOT/installed"
-vcpkg/vcpkg --disable-metrics install libvpx libyuv opus
+vcpkg/vcpkg install libvpx libyuv opus
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source $HOME/.cargo/env
 cd "$original_dir"
